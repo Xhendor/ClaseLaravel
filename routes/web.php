@@ -13,8 +13,10 @@
 
 Route::get('/', function () {
 
-    return 'Hola rutas!!';
+    //return 'Hola rutas!!';
     //return view('welcome');
+
+    return DB::table('users')->get();
 });
 
 Auth::routes();
