@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return "soy el index!!!";
     }
 
     /**
@@ -81,5 +81,10 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         //
+    }
+
+    public function getAll(){
+
+       return DB::table('categories')->get();
     }
 }

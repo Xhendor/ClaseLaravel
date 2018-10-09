@@ -30,10 +30,7 @@ Route::get('/', function () {
 
 });
 
-Route::get('categories',function (){
-
-    return DB::table('categories')->get();
-});
+Route::get('categories','CategoryController@getAll');
 
 Route::get('category/{id}',function ($id){
     $category = App\Category::find($id);
