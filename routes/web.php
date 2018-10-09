@@ -36,8 +36,9 @@ Route::get('categories',function (){
 });
 
 Route::get('category/{id}',function ($id){
+    $cat = App\Category::find($id);
 
-    return DB::table('categories')->find($id);
+    return $cat;
 });
 
 Auth::routes();
