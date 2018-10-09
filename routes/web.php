@@ -36,10 +36,9 @@ Route::get('categories',function (){
 });
 
 Route::get('category/{id}',function ($id){
-    $cat = App\Category::find($id);
-
-    return $cat;
-});
+    $category = App\Category::find($id);
+    return $category;
+})->where(['id' => '[\id]+']);
 
 Auth::routes();
 
