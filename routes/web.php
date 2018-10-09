@@ -21,7 +21,9 @@ Route::get('/', function () {
     //return view('welcome');
     //DB::table('users')->get()
 
-    return ;
+    return view('welcome');
+
+
 });
 
 Auth::routes();
