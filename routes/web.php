@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 });
 
-Route::get('categories','CategoryController@all');
+Route::get('categories','CategoryController@index');
 
 Route::get('category/{id}',function ($id){
     $category = App\Category::find($id);
