@@ -38,7 +38,7 @@ Route::get('categories',function (){
 Route::get('category/{id}',function ($id){
     $category = App\Category::find($id);
     return $category;
-})->where(['id' => '[\id]+']);
+})->where(['id' => '[\d]+']);
 
 Auth::routes();
 
