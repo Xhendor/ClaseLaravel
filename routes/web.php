@@ -21,8 +21,12 @@ Route::get('/', function () {
     //return view('welcome');
     //DB::table('users')->get()
 
-    return view('welcome');
+    //return view('welcome');
+    DB::table('categories')->insert([
+        'name'=>'Frutas','user_id'=>1
 
+    ]);
+    return DB::table('categories')->get();
 
 });
 
