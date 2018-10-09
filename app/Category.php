@@ -8,4 +8,9 @@ class Category extends Model
 {
     //
     protected $table='categories';
+
+    public function user(){
+
+        return $this->belongsTo(User::class );
+    }
 }
