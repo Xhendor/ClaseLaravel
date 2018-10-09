@@ -35,6 +35,11 @@ Route::get('categories',function (){
     return DB::table('categories')->get();
 });
 
+Route::get('category/{id}',function ($id){
+
+    return DB::table('categories')->find($id);
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
