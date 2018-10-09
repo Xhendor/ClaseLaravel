@@ -32,7 +32,7 @@ Route::get('/', function () {
 
 Route::get('categories',function (){
 
-    DB::table('categories')->get();
+    return DB::table('categories')->get();
 });
 
 Auth::routes();
