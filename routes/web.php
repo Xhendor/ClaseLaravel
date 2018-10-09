@@ -13,10 +13,15 @@
 
 Route::get('/', function () {
 
+    //DB::table('users')->insert(['name'=> 'Rosendo', 'email' => 'rosendo@rosendo.com','password'=>'123123']);
+    //    //return view('welcome');
+    //    return 'Creando registros';
+    //});
     //return 'Hola rutas!!';
     //return view('welcome');
+    //DB::table('users')->get()
 
-    return DB::table('users')->get();
+    return ;
 });
 
 Auth::routes();
