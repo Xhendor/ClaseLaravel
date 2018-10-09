@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return 'Hola rutas!!';
+    //return view('welcome');
 });
 
 Auth::routes();
