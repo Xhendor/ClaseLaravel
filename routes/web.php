@@ -18,7 +18,7 @@ Route::get('/', function () {
     //    return 'Creando registros';
     //});
     //return 'Hola rutas!!';
-    //return view('welcome');
+    return view('welcome');
     //DB::table('users')->get()
 
     //return view('welcome');
@@ -26,8 +26,13 @@ Route::get('/', function () {
   //      'name'=>'Frutas','user_id'=>1
 
    // ]);
-    return DB::table('categories')->get();
+    //return DB::table('categories')->get();
 
+});
+
+Route::get('categories',function (){
+
+    DB::table('categories')->get();
 });
 
 Auth::routes();
