@@ -1,5 +1,10 @@
 <?php
+$url = parse_url(getenv('postgres://ubpcugyduqswnp:193a4a04f16bf132a927f57c2df9778ef0b6a753c0cca3bce23513bacf1ed7f3@ec2-23-23-80-20.compute-1.amazonaws.com:5432/df1gvhm65t6lc5'));
 
+$host = $url['host'];
+$username = $url['user'];
+$password = $url['pass'];
+$database = substr($url['path'], 1);
 return [
 
     /*
@@ -13,13 +18,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
-$url = parse_url(getenv("postgres://ubpcugyduqswnp:193a4a04f16bf132a927f57c2df9778ef0b6a753c0cca3bce23513bacf1ed7f3@ec2-23-23-80-20.compute-1.amazonaws.com:5432/df1gvhm65t6lc5"));
 
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,8 +70,6 @@ $database = substr($url["path"], 1);
         'prefix'   => '',
         'schema'   => 'public',
     ),
-
-
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
