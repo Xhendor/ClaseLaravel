@@ -20,11 +20,16 @@ Route::get('/', function () {
 
 Route::get('usuarios', function () {
 
-    //return view('welcome');
 
     return DB::table('users')->get();
 
 });
+
+Route::get('usuario/{id}',function ($id){
+    $usuarios = App\User::find($id);
+    return $usuarios;
+})->where(['id' => '[\d]+']);
+
 
 
 Auth::routes();
