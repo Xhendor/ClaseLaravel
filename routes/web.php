@@ -13,29 +13,12 @@
 
 Route::get('/', function () {
 
-    //DB::table('users')->insert(['name'=> 'Rosendo', 'email' => 'rosendo@rosendo.com','password'=>'123123']);
-    //    //return view('welcome');
-    //    return 'Creando registros';
-    //});
-    //return 'Hola rutas!!';
-    return view('welcome');
-    //DB::table('users')->get()
-
     //return view('welcome');
-  //  DB::table('categories')->insert([
-  //      'name'=>'Frutas','user_id'=>1
 
-   // ]);
-    //return DB::table('categories')->get();
+    return 'Soy la pagina';
 
 });
 
-Route::get('categories','CategoryController@index');
-
-Route::get('category/{id}',function ($id){
-    $category = App\Category::find($id);
-    return $category;
-})->where(['id' => '[\d]+']);
 
 Auth::routes();
 

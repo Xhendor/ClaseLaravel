@@ -62,8 +62,7 @@ return [
             'strict' => true,
             'engine' => null,
         ],
-
-            'pgsql' => array(
+        'pgsql' => array(
         'driver'   => 'pgsql',
         'host'     => $host,
         'database' => $database,
