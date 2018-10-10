@@ -15,7 +15,7 @@ Route::get('/', function () {
 
     //return view('welcome');
 
-    return 'Soy la pagina';
+    return '<b>Soy la pagina</b>';
 
 });
 
