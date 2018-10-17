@@ -12,14 +12,11 @@
 */
 
 Route::get('/', function () {
-
     return view('welcome');
-
 
 });
 
 Route::get('usuarios', function () {
-
 
     return DB::table('users')->get();
 
