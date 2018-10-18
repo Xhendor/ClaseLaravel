@@ -22,10 +22,10 @@ Route::get('usuarios', function () {
 
 });
 
-Route::get('usuario/{id}',function ($id){
+Route::get(array('before' => 'auth','usuario/{id}',function ($id){
     $usuarios = App\User::find($id);
     return $usuarios;
-})->where(['id' => '[\d]+']);
+}))->where(['id' => '[\d]+']);
 
 
 
