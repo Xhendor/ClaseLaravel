@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('gatos', function (){
-    return DB::table('gato')->get();
+    return DB::table('gatos')->get();
 });
 
 Route::get('gatos2', function (){
