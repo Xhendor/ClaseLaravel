@@ -19,7 +19,7 @@ class CheckAge
             return $next($request);
         }
 
-        return 'No morro, eres menor: ['.age.']';
+        return redirect('home');
 
     }
 }

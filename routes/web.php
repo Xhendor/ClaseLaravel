@@ -19,7 +19,7 @@ Route::get('gatos', function (){
 
     return DB::table('gatos')->get();
 
-}) -> middleware('age.check');
+}) -> middleware('age.check','auth');
 
 Route::get('gatos2', function (){
 
