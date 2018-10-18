@@ -31,4 +31,5 @@ Route::get('usuario/{id}',function ($id){
 
 Auth::routes();
 
+Route::get('/categorias','CategoryController@index')->name('catall');
 Route::get('/home', 'HomeController@index')->name('home');

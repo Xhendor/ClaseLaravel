@@ -83,8 +83,5 @@ class CategoryController extends Controller
         //
     }
 
-    public function all(){
 
-       return DB::table('categories')->get();
-    }
 }
