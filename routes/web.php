@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('gatos', function (){
+    return DB::table('gato')->get();
+});
+
+Route::get('gatos2', function (){
+
+    return App\Gato::all();
+
+})->middleware('auth');
+
+
+
 Route::get('usuarios', function () {
     return DB::table('users')->get();
 });
