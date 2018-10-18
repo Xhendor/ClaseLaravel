@@ -16,15 +16,16 @@ Route::get('/', function () {
 });
 
 Route::get('gatos', function (){
+
     return DB::table('gatos')->get();
-});
+
+}) -> middleware('age.check');
 
 Route::get('gatos2', function (){
 
     return App\Gato::all();
 
 })->middleware('auth');
-
 
 
 Route::get('usuarios', function () {
