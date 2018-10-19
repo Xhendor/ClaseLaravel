@@ -36,12 +36,17 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'elmio'=>[
+            'age.check' => \App\Http\Middleware\CheckAge::class,
+            'auth' => \App\Http\Middleware\Authenticate::class
 
+        ],
         'api' => [
             'throttle:60,1',
             'bindings',
         ],
     ];
+
 
     /**
      * The application's route middleware.
